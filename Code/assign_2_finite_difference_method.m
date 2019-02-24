@@ -284,8 +284,6 @@ for k =1:10
     G = sparse(L*W,L*W);
     V= zeros(L*W,1);
     
-    fprintf('%i\n',k)
-    
     scale=k;
 
     scaleA = 1/scale;
@@ -385,8 +383,6 @@ for k =1:10
     I(k)= (sum(sum(J))/(scaleL*scaleW))/region; 
 end
 
-fprintf('done\n')
-
 x=linspace(1,10,10);
 
 figure(9)
@@ -397,6 +393,7 @@ ylabel('y')
 %% Part 2 C
 
 I = zeros(1,10);
+sigmaMap = zeros(L,W);
 
 for k =1:10
     
